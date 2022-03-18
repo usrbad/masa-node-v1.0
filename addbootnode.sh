@@ -1,8 +1,17 @@
 #!/bin/bash
 read -p "Введите имя своей ноды (Enter your node name): "  nodename
+while [ "$nodename" == "" ]
+do
+read -p "ВНИМАТЕЛЬНО ВВЕДИТЕ ИМЯ НОДЫ (Enter your node name): "  nodename
+done
 echo "Вы ввели (You entered): $nodename"
-read -p "Введите бутноду(-ы через запятую) (Enter a bootnode). example: enode://165bda16bad61xbd6ab165axdb613bd61ba6d1b3a:30300 : "  enode
+read -p "Введите бутноду(или несколько через запятую без пробелов) (Enter a bootnode). example: enode://165bda16bad61xbd6ab165axdb613bd61ba6d1b3a:30300 : "  enode
+while [ "$enode" == "" ]
+do
+read -p "ВНИМАТЕЛЬНО ВВЕДИТЕ БУТНОДУ (Enter a bootnode). example: enode://165bda16bad61xbd6ab165axdb613bd61ba6d1b3a:30300: "  enode
+done
 echo "Вы ввели (You entered): $enode"
+
 tee /etc/systemd/system/masad.service > /dev/null <<EOF
 [Unit]
 Description=MASA

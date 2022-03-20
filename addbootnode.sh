@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ ! -f /root/testfile.sh ]
+if [ ! -f /etc/systemd/system/masad.service ]
 then
 echo -e "Файл сервиса не найден! Сначала установите ноду как сервис.\nService file not found! Setup the node as service first."
 exit

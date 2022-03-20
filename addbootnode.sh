@@ -1,4 +1,10 @@
 #!/bin/bash
+if [ ! -f /root/testfile.sh ]
+then
+echo -e "Файл сервиса не найден! Сначала установите ноду как сервис.\nService file not found! Setup the node as service first."
+exit
+fi
+
 read -p "Введите имя своей ноды (Enter your node name): "  nodename
 while [ "$nodename" == "" ]
 do
@@ -8,7 +14,7 @@ echo "Вы ввели (You entered): $nodename"
 read -p "Введите бутноду(или несколько через запятую без пробелов) (Enter a bootnode). example: enode://165bda16bad61xbd6ab165axdb613bd61ba6d1b3a:30300 : "  enode
 while [ "$enode" == "" ]
 do
-read -p "ВНИМАТЕЛЬНО ВВЕДИТЕ БУТНОДУ (Enter a bootnode). example: enode://165bda16bad61xbd6ab165axdb613bd61ba6d1b3a:30300: "  enode
+read -p "ВНИМАТЕЛЬНО ВВЕДИТЕ БУТНОДУ (Enter a bootnode). example: enode://165bda16bad61xbd6ab165axdb613bd61ba6d1b3a:30300 : "  enode
 done
 echo "Вы ввели (You entered): $enode"
 

@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "Do not use this script for now"
+exit 0
 if [ -f /etc/systemd/system/masad.service ]
 then
 echo -e "Вы установили ноду как сервис, этот скрипт вам не поможет, он для докера.\nYou have masad.service but this script for docker!"

@@ -19,7 +19,7 @@ user="masa"
 dir="/home/masa"
 else 
 user="root"
-dir="/root"
+dir="$HOME"
 fi
 
 tee $user/masa-node-v1.0/docker-compose.yml > /dev/null <<EOF

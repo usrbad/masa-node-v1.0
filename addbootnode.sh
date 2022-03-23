@@ -18,7 +18,7 @@ read -p "ВНИМАТЕЛЬНО ВВЕДИТЕ БУТНОДУ (Enter a bootnode)
 done
 echo "Вы ввели (You entered): $enode"
 
-if [ -n "$(cat /etc/passwd | grep /home/masa:/usr/sbin/nologin)" ]
+if [ -n "$(cat /etc/passwd | grep /home/masa)" ]
 then
 echo "masa user found"
 user="masa"

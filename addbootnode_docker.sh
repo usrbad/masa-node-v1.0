@@ -81,6 +81,7 @@ services:
     hostname: masa-node
     ports:
       - "22001:8545"
+      - "21000:21000"
     volumes:
       - vol1:/qdata
       - ./network/testnet:/network:ro

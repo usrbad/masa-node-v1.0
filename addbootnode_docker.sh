@@ -22,7 +22,7 @@ user="root"
 dir="$HOME"
 fi
 
-tee $user/masa-node-v1.0/docker-compose.yml > /dev/null <<EOF
+tee /$user/masa-node-v1.0/docker-compose.yml > /dev/null <<EOF
 # Masa Testnet Node v1.0
 
 version: "3.6"
@@ -104,5 +104,5 @@ volumes:
 EOF
 echo "Бутнода добавлена (Bootnode added)"
 echo "Перезапускаем докер... (Restarting docker image...)"
-cd $user/masa-node-v1.0/ && docker-compose down && PRIVATE_CONFIG=ignore docker-compose up -d && cd $HOME
+cd /$user/masa-node-v1.0/ && docker-compose down && PRIVATE_CONFIG=ignore docker-compose up -d && cd $HOME
 echo "DONE"

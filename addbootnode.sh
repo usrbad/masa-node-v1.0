@@ -28,7 +28,7 @@ user="root"
 dir="$HOME"
 fi
 
-tee /etc/systemd/system/masad.service > /dev/null <<EOF
+sudo tee /etc/systemd/system/masad.service > /dev/null <<EOF
 [Unit]
 Description=MASA
 After=network.target

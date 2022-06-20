@@ -14,9 +14,9 @@ echo "Вы ввели (You entered): $enode"
 
 if [ -n "$(cat /etc/passwd | grep /home/masa:/usr/sbin/nologin)" ]
 then
-echo "masa user found"
-user="masa"
-dir="/home/masa"
+echo "masa user found but we are in docker"
+user="root"
+dir="$HOME"
 else 
 user="root"
 dir="$HOME"
